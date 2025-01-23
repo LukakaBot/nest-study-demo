@@ -7,8 +7,13 @@ export class CatsController {
     return 'This action returns all cats';
   }
 
+  @Get('ab*cd')
+  findAllWildcard(): string {
+    return 'This route uses a wildcard';
+  }
+
   @Post()
-  create() {
+  create(): string {
     return 'This action adds a new cat';
   }
 }
